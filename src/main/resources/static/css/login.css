@@ -1,0 +1,27 @@
+body{background:url('../images/login.jpg') center top no-repeat;}
+.login{ width:300px; height:auto; background:#fff; padding:40px 60px;position:absolute;top:60%;left:50%;margin:-245px 0 0 -190px;}
+.login ul{ width:100%;}
+.login ul li{width:100%; display:inline-block;}
+.login ul li.border{border-bottom:#d7d7d7 solid 1px;}
+.login ul li p{ display:block; width:100%; text-align:center;}
+.login ul li p.logo{ height:85px; background:url('../images/LOGO-XX_03.png') center top no-repeat;}
+.login ul li p.logo .logo_name{ font-size:24px; color:#00A7DB; float:right; line-height:52px;}
+.login ul li p.error{ color:#ff0000; font-size:12px; line-height:24px; margin-bottom:10px;}
+.login ul li input[type="text"]{display:inline-block;padding:17px 0 17px 35px; border:0;width:277px; color:#aaa; font-size:16px;height:18px;background:url('../images/ico-login.png') left center no-repeat;}
+.login ul li input[type="password"]{display:inline-block;padding:17px 0 17px 35px; border:0;width:277px; color:#aaa; font-size:16px;height:18px;background:url('../images/ico-login.png') left center no-repeat;}
+.login ul li input.name{ background-position:0 0px;}
+.login ul li input.name:focus{background-position:0 -55px;}
+.login ul li input.lock{background-position:0 -113px;}
+.login ul li input.lock:focus{background-position:0 -168px;}
+.login ul li input.key{background-position:0 -220px;width:145px;}
+.login ul li input.key:focus{background-position:0 -275px;}
+.login ul li a{ display:inline-block; width:120px; vertical-align:middle;}
+.login ul li input[type="checkbox"]{ display:none;}
+.login ul li label{ font-size:14px; display:block; height:22px; line-height:22px; font-size:14px; margin-top:20px; padding-left:30px;
+background:url('../images/check-bg.png') 0 0 no-repeat;}
+.login ul li label.cur{ background-position:0 -22px;}
+.login ul li button{ background:#00a7db; color:#fff; font-size:22px; text-align:center; height:46px; border:0; width:100%; cursor:pointer; margin-top:20px;}
+.login ul li button:hover{ background:#0299c8;}
+
+.fix-bottom{ position:fixed;bottom:15px; right:15px; z-index:9999}
+.fix-bottom span{ font-size:16px; color:#fff; margin-left:15px; display:inline-block;}

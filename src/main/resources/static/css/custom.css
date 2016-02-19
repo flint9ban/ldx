@@ -1,0 +1,77 @@
+/*=====服务区新增=====*/
+.map-lable {
+	width:550px;
+	border: 1px #ccc solid;
+	height: 46px;
+	line-height: 46px;
+	padding: 0 10px;
+	margin-bottom:6px;
+}
+.map-img{ width:570px;}
+.map-lable .btn-common{ line-height:13px;} 
+.popup-div {
+	width: 200px;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+	position:absolute;
+	background:none repeat scroll 0 0 #fff;
+}
+.in-i{
+	position:absolute;
+	left:15px;
+	top:15px;
+}
+.popup-div2 {
+	width: 100px;
+	height:200px;
+	overflow:auto;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+	position:absolute;
+	background:none repeat scroll 0 0 #fff;
+}
+.popup-div2 li{
+	cursor:pointer;}
+.popup-div2 li:hover{
+	background:#bee1fa;}	
+
+.popup-div ul {
+	margin: 5px;
+	height: 120px;
+	overflow-y: auto;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+.popup-div .popup-div-p {
+	margin:0 auto;
+	text-align:center;
+}
+
+
+/*店铺申请-店铺详情页*/
+.tr-bgcolor {
+	background-color: #f0f0f0;
+}
+.account-title {
+	text-align: left;
+	text-indent: 65px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.account-title1 {
+	text-align: left;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+.product .pr-table{ margin:0px;}
+
+
+
+/*店铺申请-门店交易记录详情页*/
+.t-ts{ font-size:14px;
+	line-height:27px;
+	margin-right:20px;
+}

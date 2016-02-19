@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>数据库生成器</title>
+</head>
+<body>
+    <ul>
+        <li th:each="table : ${tables}" th:text="${ table }"></li>
+    </ul>
+</body>
+</html>
