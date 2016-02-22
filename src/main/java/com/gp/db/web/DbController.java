@@ -1,5 +1,6 @@
 package com.gp.db.web;
 
+import com.gp.db.domain.Column;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -13,6 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by liyi on 2016/2/18.
@@ -24,12 +30,8 @@ public class DbController {
     @Autowired
     private ResourceLoader resourceLoader;
 
-//    @Autowired
-//    protected AuthenticationManager authenticationManager;
-
     @RequestMapping
     public String index(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
-//        auth(request,"1","2");
         Resource resource =  resourceLoader.getResource("classpath:tables");
         model.addAttribute("tables",resource.getFile().list());
         return "db/index";
@@ -37,22 +39,16 @@ public class DbController {
 
     @RequestMapping(value="{table}")
     @ResponseBody
-    public String detail(@PathVariable("table") String table) throws IOException {
+    public List<Column> detail(@PathVariable("table") String table) throws IOException {
         Resource resource = resourceLoader.getResource("classpath:tables");
         File[] files = resource.getFile()
                 .listFiles((file,name)->name.equals(table));
-        return "yes";
+        if(files.length>0){
+            File file = files[0];
+            return Files.lines(Paths.get(file.getPath()+"/table")).map(r->{return new Column(r);}).collect(Collectors.toList());
+        }
+        return null;
     }
 
-//    private void auth(HttpServletRequest request,String username,String password){
-//        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
-//
-//        // generate session if one doesn't exist
-//        request.getSession();
-//
-//        token.setDetails(new WebAuthenticationDetails(request));
-//        Authentication authenticatedUser = authenticationManager.authenticate(token);
-//
-//        SecurityContextHolder.getContext().setAuthentication(authenticatedUser);
-//    }
+
 }
